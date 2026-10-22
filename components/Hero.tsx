@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDownRight } from 'lucide-react';
+import { ArrowDownRight, CalendarClock } from 'lucide-react';
 import SnapPortrait from '@/components/SnapPortrait';
-import BookingModal from '@/components/BookingModal';
 import EmailCopyPill from '@/components/EmailCopyPill';
+import { CAL_LINK } from '@/data/contact';
 
 const stamp = 'MY PROJECTS • MY PROJECTS • ';
 
@@ -28,7 +28,15 @@ export default function Hero() {
             Full-Stack Software Engineer & Automation Specialist. I build scalable web platforms, custom data scrapers, and high-performance backend pipelines for global clients.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
-            <BookingModal />
+            <a
+              href={`https://cal.com/${CAL_LINK}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff2a5f] hover:bg-[#ff4673] px-6 py-3 font-medium text-white shadow-lg shadow-[#ff2a5f]/25 transition-colors"
+            >
+              <CalendarClock className="w-4 h-4" aria-hidden />
+              Book a Discovery Call
+            </a>
             <EmailCopyPill />
           </div>
         </motion.div>
