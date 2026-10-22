@@ -1,14 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, CodeXml, CalendarClock } from 'lucide-react';
+import { Mail, CodeXml } from 'lucide-react';
+import BookingModal from '@/components/BookingModal';
+import EmailCopyPill from '@/components/EmailCopyPill';
+import { MAILTO } from '@/data/contact';
 
 const spring = { type: 'spring', stiffness: 200, damping: 20 } as const;
 
-// TODO: set real scheduling and GitHub URLs.
 const contacts = [
-  { href: 'mailto:divyanshudevazya@gmail.com', label: 'Email Me', icon: Mail, primary: true },
-  { href: 'https://cal.com', label: 'Book a Call', icon: CalendarClock, primary: false },
+  { href: MAILTO, label: 'Email Me', icon: Mail, primary: false },
   { href: 'https://github.com/devazya', label: 'GitHub', icon: CodeXml, primary: false },
 ];
 
@@ -34,6 +35,7 @@ export default function ContactSection() {
           and code your team can maintain.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-3">
+          <BookingModal />
           {contacts.map(({ href, label, icon: Icon, primary }) => (
             <motion.a
               key={label}
@@ -52,6 +54,9 @@ export default function ContactSection() {
               {label}
             </motion.a>
           ))}
+        </div>
+        <div className="mt-6">
+          <EmailCopyPill />
         </div>
       </motion.div>
     </section>

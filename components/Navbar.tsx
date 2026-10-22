@@ -1,9 +1,10 @@
 import { CodeXml, Mail } from 'lucide-react';
+import { MAILTO } from '@/data/contact';
 import VerticalDock from './VerticalDock';
 
 const socials = [
   { href: 'https://github.com/devazya', label: 'GitHub', Icon: CodeXml },
-  { href: 'mailto:divyanshudevazya@gmail.com', label: 'Email', Icon: Mail },
+  { href: MAILTO, label: 'Email', Icon: Mail },
 ];
 
 export default function Navbar() {

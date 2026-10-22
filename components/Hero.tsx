@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDownRight } from 'lucide-react';
 import SnapPortrait from '@/components/SnapPortrait';
+import BookingModal from '@/components/BookingModal';
+import EmailCopyPill from '@/components/EmailCopyPill';
 
 const stamp = 'MY PROJECTS • MY PROJECTS • ';
 
@@ -25,6 +27,10 @@ export default function Hero() {
           <p className="text-lg sm:text-xl text-slate-400 max-w-xl leading-relaxed">
             Full-Stack Software Engineer & Automation Specialist. I build scalable web platforms, custom data scrapers, and high-performance backend pipelines for global clients.
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+            <BookingModal />
+            <EmailCopyPill />
+          </div>
         </motion.div>
 
         <motion.div
