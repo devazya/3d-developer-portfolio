@@ -3,13 +3,13 @@
 import { motion } from 'framer-motion';
 import { Mail, CodeXml, CalendarClock } from 'lucide-react';
 import EmailCopyPill from '@/components/EmailCopyPill';
-import { CAL_LINK, MAILTO } from '@/data/contact';
+import { CAL_LINK, EMAIL_LINK } from '@/data/contact';
 
 const spring = { type: 'spring', stiffness: 200, damping: 20 } as const;
 
 const contacts = [
   { href: `https://cal.com/${CAL_LINK}`, label: 'Book a Call', icon: CalendarClock, primary: true },
-  { href: MAILTO, label: 'Email Me', icon: Mail, primary: false },
+  { href: EMAIL_LINK, label: 'Email Me', icon: Mail, primary: false },
   { href: 'https://github.com/devazya', label: 'GitHub', icon: CodeXml, primary: false },
 ];
 
