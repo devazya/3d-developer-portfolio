@@ -24,8 +24,8 @@ export const projects: readonly Project[] = [
     repoUrl: 'https://github.com/devazya',
   },
   {
-    title: 'White-Label Multi-Tenant Food Delivery Architecture',
-    oneLiner: 'Developed a real-time order tracking and vendor management mobile/web ecosystem for client, rider, and admin interfaces.',
+    title: 'White-Label Multi-Tenant Food Delivery App',
+    oneLiner: 'Built a cross-platform Flutter food delivery app with real-time order tracking and vendor management, with dedicated client, rider, and admin interfaces.',
     impact: 'Built geospatial indexing on MongoDB to filter 500+ vendor menus in under 50ms and sustained live WebSocket location streams.',
     tags: ['Flutter', 'Node.js', 'Express.js', 'MongoDB', 'WebSockets', 'JWT'],
     repoUrl: 'https://github.com/devazya',
