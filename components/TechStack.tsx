@@ -1,7 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Server, MessagesSquare, Database, Bot, BrainCircuit, type LucideIcon } from 'lucide-react';
+import { Server, MessagesSquare, Database, Bot, BrainCircuit, CalendarClock, Check, type LucideIcon } from 'lucide-react';
+import EmailCopyPill from '@/components/EmailCopyPill';
+import { CAL_LINK } from '@/data/contact';
 
 const categories: readonly { title: string; icon: LucideIcon; items: readonly string[] }[] = [
   {
@@ -30,6 +32,9 @@ const categories: readonly { title: string; icon: LucideIcon; items: readonly st
     items: ['Python', 'Playwright', 'Scrapy', 'Selenium', 'Asyncio'],
   },
 ];
+
+// Shown on the CTA card; keep these to commitments you actually honour.
+const promises = ['Reply within 24 hours', 'Fixed-price quotes', 'Weekly progress demos'];
 
 const spring = { type: 'spring', stiffness: 200, damping: 20 } as const;
 
@@ -73,6 +78,36 @@ export default function TechStack() {
               </ul>
             </motion.div>
           ))}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ ...spring, delay: categories.length * 0.08 }}
+            className="flex flex-col rounded-2xl bg-gradient-to-br from-[#ff2a5f]/15 to-slate-900/60 border border-[#ff2a5f]/40 backdrop-blur-md p-6 shadow-[0_0_40px_-12px] shadow-[#ff2a5f]/50"
+          >
+            <h3 className="text-lg font-semibold text-white mb-2">Have a project in mind?</h3>
+            <p className="text-sm text-slate-300 mb-4">Don&apos;t see your stack? I pick up new tools fast.</p>
+            <ul className="space-y-2 mb-6 flex-1">
+              {promises.map((p) => (
+                <li key={p} className="flex items-center gap-2 text-sm text-slate-200">
+                  <Check className="w-4 h-4 shrink-0 text-[#ff2a5f]" aria-hidden />
+                  {p}
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href={`https://cal.com/${CAL_LINK}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#ff2a5f] hover:bg-[#ff4673] px-4 py-2 text-sm font-medium text-white transition-colors"
+              >
+                <CalendarClock className="w-4 h-4" aria-hidden />
+                Book a Call
+              </a>
+              <EmailCopyPill />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
