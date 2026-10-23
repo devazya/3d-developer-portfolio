@@ -36,4 +36,9 @@ export const automations: readonly Automation[] = [
     summary: 'Meta Graph API / Playwright pipeline that listens to story mentions, keyword triggers, and inbound comments to send personalized DMs to prospects. Increased outbound conversion rates by 45% and replaced manual client DM outreach.',
     repoUrl: 'https://github.com/devazya',
   },
+  {
+    title: 'IPO Engine — Rule-Based IPO Screening & Telegram Alerts',
+    tags: ['Python 3', 'Pydantic', 'requests', 'BeautifulSoup', 'Tkinter', 'pytest', 'mypy (strict)', 'Telegram Bot API', 'Windows Task Scheduler'],
+    summary: 'Scrapes Indian mainboard IPO subscription, GMP and anchor data, scores each IPO, models allotment odds across family PANs, enforces a rupee-capped capital pool, and alerts on Telegram. Small-sample backtest (19 Sep–Oct 2026 listings, thresholds tuned on the same data): flagged all 7 that listed 10%+ up, none of the 4 that listed below issue. 76 tests, strict mypy. A screening tool, not investment advice.',
+  },
 ];
