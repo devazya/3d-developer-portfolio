@@ -51,4 +51,10 @@ export const projects: readonly Project[] = [
     tags: ['NestJS', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Redis', 'Docker', 'WebSockets'],
     repoUrl: 'https://github.com/devazya',
   },
+  {
+    title: 'IPO Engine — Rule-Based IPO Screening & Telegram Alerts',
+    oneLiner: 'Decision engine for Indian mainboard IPOs: scrapes subscription, grey-market premium (GMP) and anchor-investor data, applies a rule backtested on 19 real 2026 listings, models allotment odds across family PANs, and enforces a rupee-capped capital pool. Runs as a desktop app or on a daily 4 pm schedule, with Telegram alerts.',
+    impact: 'Backtest on a small sample (19 mainboard listings, Sep–Oct 2026; thresholds tuned on the same data): flagged all 7 that listed 10%+ up and applied to none of the 4 that listed below issue price. 76 automated tests, strict mypy. A screening tool, not investment advice.',
+    tags: ['Python 3', 'Pydantic', 'requests', 'BeautifulSoup', 'Tkinter', 'pytest', 'mypy (strict)', 'Telegram Bot API', 'Windows Task Scheduler'],
+  },
 ];
