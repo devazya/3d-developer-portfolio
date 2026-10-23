@@ -16,7 +16,7 @@ export const automations: readonly Automation[] = [
     title: 'E-Commerce Catalog Scraper & Telegram Bot',
     tags: ['Python', 'Supabase', 'Telegram API'],
     summary: 'Deduplicates product feeds and triggers real-time price arbitrage alerts to Telegram channels within 2 seconds of price changes.',
-    repoUrl: 'https://github.com/devazya',
+    repoUrl: 'https://github.com/devazya/telegram-bot',
   },
   {
     title: 'B2B Lead Scraping & Automated Prospecting Pipeline',
@@ -31,10 +31,10 @@ export const automations: readonly Automation[] = [
     repoUrl: 'https://github.com/devazya',
   },
   {
-    title: 'Instagram Auto-DM & Social Lead Engagement Engine',
-    tags: ['Python', 'Playwright', 'Meta Graph API', 'Webhooks', 'Node.js', 'Asyncio'],
-    summary: 'Meta Graph API / Playwright pipeline that listens to story mentions, keyword triggers, and inbound comments to send personalized DMs to prospects. Increased outbound conversion rates by 45% and replaced manual client DM outreach.',
-    repoUrl: 'https://github.com/devazya',
+    title: 'Instagram Comment-to-DM Lead Engagement Bot',
+    tags: ['Java 17', 'Spring Boot 3', 'Meta Graph API', 'Webhooks'],
+    summary: 'Spring Boot service that listens for Instagram comments containing a trigger keyword (e.g. "LINK") and instantly sends each commenter a private-reply DM via the Meta Graph API, replacing manual DM outreach.',
+    repoUrl: 'https://github.com/devazya/instagram-bot',
   },
   {
     title: 'IPO Engine — Rule-Based IPO Screening & Telegram Alerts',
