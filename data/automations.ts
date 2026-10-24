@@ -26,9 +26,8 @@ export const automations: readonly Automation[] = [
   },
   {
     title: 'WhatsApp Automated Client Outreach & Notification Engine',
-    tags: ['Node.js', 'Express.js', 'Meta Cloud API', 'Webhooks', 'MongoDB'],
-    summary: 'Production-grade WhatsApp bot for real-time order notifications, automated support flows, and lead engagement. Increased lead response rates by 40% and eliminated manual messaging overhead.',
-    repoUrl: 'https://github.com/devazya',
+    tags: ['Make.com', 'Twilio WhatsApp API', 'Webhooks'],
+    summary: 'WhatsApp automation built with Make.com scenarios and the Twilio WhatsApp API: sends real-time order notifications, runs automated support replies, and engages new leads. Increased lead response rates by 40% and eliminated manual messaging overhead.',
   },
   {
     title: 'Instagram Comment-to-DM Lead Engagement Bot',
