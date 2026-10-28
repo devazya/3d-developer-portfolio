@@ -2,7 +2,7 @@
 
 import type { MouseEvent } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { ArrowUpRight, CodeXml, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, CodeXml, Lock, TrendingUp } from 'lucide-react';
 import type { Project } from '@/data/projects';
 
 
@@ -27,7 +27,7 @@ export function useTilt() {
   return { onMouseMove: onMove, onMouseLeave: onLeave, style: { rotateX, rotateY, transformPerspective: 1000 } };
 }
 
-export default function ProjectCard({ title, oneLiner, tags, impact, demoUrl, repoUrl }: Project) {
+export default function ProjectCard({ title, oneLiner, tags, impact, demoUrl, repoUrl, privateRepo }: Project) {
   const tilt = useTilt();
 
   return (
@@ -75,6 +75,14 @@ export default function ProjectCard({ title, oneLiner, tags, impact, demoUrl, re
           >
             <CodeXml className="w-4 h-4" aria-hidden /> Source
           </a>
+        )}
+        {privateRepo && (
+          <span
+            className="inline-flex w-fit cursor-default select-none items-center gap-1.5 rounded-lg border border-slate-800 px-4 py-2 text-sm font-medium text-slate-500"
+            title="Source code is in a private repository"
+          >
+            <Lock className="w-4 h-4" aria-hidden /> Private repo
+          </span>
         )}
       </div>
     </motion.article>

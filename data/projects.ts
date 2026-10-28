@@ -5,16 +5,18 @@ export type Project = {
   readonly tags: readonly string[];
   readonly demoUrl?: string;
   readonly repoUrl?: string;
+  /** Code exists but the repo isn't public: shows a non-clickable lock badge. */
+  readonly privateRepo?: boolean;
 };
 
 export const projects: readonly Project[] = [
   {
     title: 'CodeGrindr — AI Mock Interview & Coding Practice Platform',
-    oneLiner: 'Built an end-to-end coding interview platform integrating an in-browser Monaco code execution editor with real-time AI feedback loops.',
-    impact: 'Accelerated interview prep efficiency for 300+ tracked algorithmic problems; integrated Groq Llama-3.3 LLM API for low-latency (<400ms) code analysis.',
+    oneLiner: 'Helps developers prepare for coding interviews: they solve problems in an in-browser Monaco editor and get instant AI feedback on their code.',
+    impact: "Tracks progress across 300+ algorithmic problems and reviews each solution with Groq's Llama 3.3 model.",
     tags: ['React.js', 'Supabase', 'Groq API (Llama 3.3)', 'Monaco Editor', 'Tailwind CSS'],
     demoUrl: 'https://codegrindr.vercel.app',
-    repoUrl: 'https://github.com/devazya',
+    privateRepo: true,
   },
   {
     title: 'CareSync AI — AI-First CRM for Healthcare Field Reps',
@@ -25,30 +27,30 @@ export const projects: readonly Project[] = [
   },
   {
     title: 'White-Label Multi-Tenant Food Delivery App',
-    oneLiner: 'Built a cross-platform Flutter food delivery app with real-time order tracking and vendor management, with dedicated client, rider, and admin interfaces.',
-    impact: 'Built geospatial indexing on MongoDB to filter 500+ vendor menus in under 50ms and sustained live WebSocket location streams.',
+    oneLiner: 'Lets a delivery business run its own branded app: customers order and track deliveries live, while rider and admin interfaces handle fulfilment and vendors.',
+    impact: 'Geospatial vendor search with MongoDB indexes and live rider location over WebSockets.',
     tags: ['Flutter', 'Node.js', 'Express.js', 'MongoDB', 'WebSockets', 'JWT'],
-    repoUrl: 'https://github.com/devazya',
+    privateRepo: true,
   },
   {
     title: 'Multi-Vendor Hyperlocal Marketplace Backend (NestJS)',
-    oneLiner: 'Microservices backend built with NestJS, TypeScript, and PostgreSQL for localized vendor discovery, catalog management, and real-time order processing.',
-    impact: 'Architected clean dependency-injected microservices with Redis caching, supporting fast geospatial queries (<40ms) and multi-tenant store isolation.',
+    oneLiner: 'Backend for a multi-vendor local marketplace: customers find nearby stores, vendors manage their catalogs, and orders are processed in real time.',
+    impact: "Modular NestJS services with Redis caching and multi-tenant isolation, so each store's data stays separate.",
     tags: ['NestJS', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Redis', 'Docker', 'WebSockets'],
-    repoUrl: 'https://github.com/devazya',
+    privateRepo: true,
   },
   {
     title: 'Stock Trading Simulator & Portfolio Analytics Dashboard',
-    oneLiner: 'Real-time portfolio tracking dashboard with simulated order flow and a transactional ledger that keeps balances consistent.',
-    impact: 'Designed PostgreSQL schemas and transactions that prevent race conditions during high-concurrency trade execution simulations.',
+    oneLiner: 'Lets users practise trading without real money: place simulated orders and track portfolio performance on a live dashboard.',
+    impact: 'A transactional ledger keeps balances consistent with every simulated trade.',
     tags: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Chart.js', 'JWT'],
-    repoUrl: 'https://github.com/devazya',
+    privateRepo: true,
   },
   {
     title: 'Enterprise REST API Backend (NestJS)',
-    oneLiner: 'Modular REST API backend built with NestJS, TypeScript, and PostgreSQL, with clean architecture, dependency injection, JWT authentication, and rate-limiting guards.',
-    impact: 'Architected scalable microservices handling structured data pipelines with 99.9% uptime and <80ms response latencies under concurrent traffic.',
+    oneLiner: 'A ready-to-extend API foundation for business apps, with authentication, rate limiting and documented endpoints built in.',
+    impact: 'Modular NestJS architecture with dependency injection, JWT auth, rate-limiting guards and Swagger docs.',
     tags: ['NestJS', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Swagger', 'Docker'],
-    repoUrl: 'https://github.com/devazya',
+    privateRepo: true,
   },
 ];

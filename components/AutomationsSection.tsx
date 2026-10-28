@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CodeXml, TerminalSquare } from 'lucide-react';
+import { CodeXml, Lock, TerminalSquare } from 'lucide-react';
 import { useTilt } from '@/components/ProjectCard';
 import { automations, type Automation } from '@/data/automations';
 
@@ -23,7 +23,7 @@ export default function AutomationsSection() {
   );
 }
 
-function ScraperCard({ title, tags, summary, repoUrl, i }: Automation & { i: number }) {
+function ScraperCard({ title, tags, summary, repoUrl, privateRepo, i }: Automation & { i: number }) {
   const tilt = useTilt();
   return (
         <motion.article
@@ -62,6 +62,14 @@ function ScraperCard({ title, tags, summary, repoUrl, i }: Automation & { i: num
               >
                 <CodeXml className="w-4 h-4" aria-hidden /> Source
               </a>
+            )}
+            {privateRepo && (
+              <span
+                className="mt-5 inline-flex w-fit cursor-default select-none items-center gap-1.5 rounded-lg border border-slate-800 px-3 py-1.5 font-sans text-sm text-slate-500"
+                title="Source code is in a private repository"
+              >
+                <Lock className="w-4 h-4" aria-hidden /> Private repo
+              </span>
             )}
           </div>
         </motion.article>
